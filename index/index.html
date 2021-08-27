@@ -10,34 +10,84 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="/style/style.css">
     </head>
     <body>
-        <header>
-            <h1>Onkel Otto sitzt lachend in der Badewanne</h1>
-            <p>  </p>
-        </header>
+    <header>
+         <h1>Onkel Otto sitzt lachend in der Badewanne</h1>
+         <p>  </p>
+    </header>
 
         // Thema wählen, je nachdem andere Backupwords hinterlegt
+    <div id="input-radio">
+    <label>
+    <input type="radio" name="topic-selector" id="Alltag">
+           Thema: Alltag
+    </label>
+    </div>
+
         <div id="input-radio">
-        <label>
-            <input type="radio" name="word-selector" id="Onkel">
-            onkel
-        
-        </label>
-        </div>
+            <label>
+                <input type="radio" name="topic-selector" id="Partypeople">
+               Thema:  Partypeople
+            
+            </label>
+            </div>
+
+            <div id="input-radio">
+                <label>
+                    <input type="radio" name="topic-selector" id="Einkaufen">
+                  Thema:  Einkaufen
+                
+                </label>
+                </div>
 
         // Worteingabe 
         <div id="input-words">
 
         <label>
-            
+        Onkel - bitte Nomen (Singular) eintragen
+        <input type="text" id="nouns">
         </label>    
+        <label>
+            Otto - bitte einen Vornamen, Vor- und Nachnamen, Nickname eintragen
+            <input type="text" id="name">
+            </label>  
+            <label>
+                sitzt - bitte Verb (3. Person Singular) eintragen
+                <input type="text" id="verb">
+                </label>  
+                <label>
+                    lachend - bitte Adjektiv eintragen
+                    <input type="text" id="adjective">
+                    </label>  
+                    <label>
+                        in der Badewanne - bitte einen Ort oder Umgebung eingeben
+                        <input type="text" id="location">
+                        </label>  
         </div>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <div id="gen-start">
+<button id="btn-start">
+START
+</button>
+    </div>
+
+    <div id="topic">
+        <p id="topic1">
+            Hilfssheriff {{name}} {{verb}} schielend {{location}}
+        </p>
+
+        <p id="topic2">
+           {{noun}} Lothar Matthäus {{verb}} verhaltensauffällig {{location}}
+        </p>
+
+
+        <p id="topic3">
+            Marktschreier {{name}} zittert {{adjective}} {{location}}
+        </p>
+    </div>
         
-        <script src="" async defer></script>
+        <script src="backupwords.js"></script>
+        <script src="onkelotto.js"></script>
     </body>
 </html>
