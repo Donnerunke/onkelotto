@@ -52,16 +52,17 @@ function displaytopic(topic) {
     topic.innerText = modifiedText;
  } 
 
- function changeSpeechParty(topic){
-     var nounArr = inputNoun.value.split(',');
-     if(nounArr.length > 0) {
-         for(var i = 0; < nounArr.length; i++) {
-             getInputWords(topic, '{{noun}}' , nounArr[i]);
-         }
+ function changeSpeechParts(topic){
+    var nounArr = inputNoun.value.split(',');
+    if(nounArr.length > 0){
+        for(var i = 0; i < nounArr.length; i++){
+            getInputWords(topic,'{{noun}}', nounArr[i]);
+        }
 
      }
      if(nounArr.length < 4) {
-         var nouns = backupwords.nounsfor(var i = 0; i < nouns.length; i++){
+         var nouns = backupwords.nouns 
+         for (var i = 0; i < nouns.length; i++){
              var topicText = topic.innerText;
              console.log('backup nouns', nouns[i])
              var modifiedText = topicText.replace('{{noun}}', nouns[i]);
